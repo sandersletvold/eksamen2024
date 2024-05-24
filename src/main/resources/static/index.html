@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Eksamen 2024</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="script.js"></script>
+</head>
+<body>
+<!-- Oppgave 1 -->
+<h1>Create user</h1>
+<label for="firstname">Firstname</label><input id="firstname"><p id="firstnameError" style="color: red"></p>
+<label for="lastname">Lastname</label><input id="lastname"><p id="lastnameError" style="color: red"></p>
+<label for="dateOfBirth">Date of Birth</label><input id="dateOfBirth"><p id="dateOfBirthError" style="color: red"></p>
+<label for="phoneNumber">Phone number</label><input id="phoneNumber"><p id="phoneNumberError" style="color: red"></p>
+<label for="email">Email</label><input id="email"><p id="emailError" style="color: red"></p>
+<label for="password">Password</label><input id="password"><p id="passwordError" style="color: red"></p>
+<button onclick="saveUser()">Create user</button>
+
+<h1>Log in</h1>
+<label for="lastnameLogin">Firstname</label><input id="lastnameLogin">
+<label for="passwordLogin">Lastname</label><input id="passwordLogin">
+<p id="wrongLogin"></p>
+<button onclick="login()">Log in</button>
+</body>
+</html>
