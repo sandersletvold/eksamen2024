@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>DATA1700 Eksamen</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="books.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<h1>Register of Books</h1>
+<button onclick="logOut()">Log out</button>
+
+<h2>Save book</h2>
+<label for="ISBN"><input id="ISBN" placeholder="ISBN"></label>
+<p id="ISBNerror" style="color: red"></p>
+
+<label for="title"><input id="title" placeholder="Title"></label>
+<p id="titleError" style="color: red"></p>
+
+<label for="author"><input id="author" placeholder="Author"></label>
+<p id="authorError" style="color: red"></p>
+
+<label for="releaseYear"><input id="releaseYear" placeholder="Release Year"></label>
+<p id="releaseYearError" style="color: red"></p>
+
+<label for="rating"><input id="rating" placeholder="Rating"></label>
+<p id="ratingError" style="color: red"></p>
+
+<button onclick="saveBook()">Register book</button>
+<p id="saveBookMessage" style="color: blue"></p>
+
+<div id="bookList">
+    <h2>All books</h2>
+</div>
+</body>
+</html>

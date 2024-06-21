@@ -17,13 +17,15 @@ public class User {
     private String surname;
     private String phoneNumber;
     private String email;
+    private String password;
     private Date birthDate;
 
-    public User(String firstname, String surname, String phoneNumber, String email, Date birthDate) {
+    public User(String firstname, String surname, String phoneNumber, String email, String password, Date birthDate) {
         this.firstname = firstname;
         this.surname = surname;
         this.phoneNumber = phoneNumber;
         this.email = email;
+        this.password = password;
         this.birthDate = birthDate;
     }
 }

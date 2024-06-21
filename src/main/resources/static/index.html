@@ -2,30 +2,46 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Eksamen 2024</title>
+    <title>DATA1700 Innlogging</title>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <script src="script.js"></script>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
 <!-- Task 1 -->
-<h1>Create user</h1>
-<label for="firstname"><input id="firstname" placeholder="Firstname"></label>
-<p id="firstnameError" style="color: red"></p>
+<div id="createUser">
+    <h1>Create user</h1>
+    <label for="firstname"><input id="firstname" placeholder="Firstname"></label>
+    <p id="firstnameError" style="color: red"></p>
 
-<label for="surname"><input id="surname" placeholder="Surname"></label>
-<p id="surnameError" style="color: red"></p>
+    <label for="surname"><input id="surname" placeholder="Surname"></label>
+    <p id="surnameError" style="color: red"></p>
 
-<label for="phoneNumber"><input id="phoneNumber" placeholder="Phone number"></label>
-<p id="phoneNumberError" style="color: red"></p>
+    <label for="phoneNumber"><input id="phoneNumber" placeholder="Phone number"></label>
+    <p id="phoneNumberError" style="color: red"></p>
 
-<label for="email"><input id="email" placeholder="Email"></label>
-<p id="emailError" style="color: red"></p>
+    <label for="email"><input id="email" placeholder="Email"></label>
+    <p id="emailError" style="color: red"></p>
 
-<label for="birthDate"><input id="birthDate" type="date"></label>
-<p id="birthDateError" style="color: red"></p>
+    <label for="password"><input id="password" placeholder="Password"></label>
+    <p id="passwordError" style="color: red"></p>
 
-<button onclick="createUser()">Create user</button>
-<p id="createUserMessage" style="color: green"></p>
+    <p>Birth date <label for="birthDate"><input id="birthDate" type="date"></label></p>
+    <p id="birthDateError" style="color: red"></p>
+
+    <button onclick="createUser()">Create user</button>
+    <p id="createUserMessage" style="color: green"></p>
+</div>
+<div id="logIn">
+    <h1>Log in</h1>
+    <label for="logInEmail"><input id="logInEmail" placeholder="Email"></label>
+
+    <label for="logInPassword"><input id="logInPassword" placeholder="Password" type="password"></label>
+
+    <br><br>
+    <button onclick="logIn()">Log in</button>
+    <p id="logInMessage" style="color: red"></p>
+</div>
 </body>
 </html>
