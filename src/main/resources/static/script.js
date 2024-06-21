@@ -8,8 +8,8 @@ function createUser() {
     $("#birthDateError").html("");
 
     const user = {
-        firstName : $("#firstname").val(),
-        surName : $("#surname").val(),
+        firstname : $("#firstname").val(),
+        surname : $("#surname").val(),
         phoneNumber : $("#phoneNumber").val(),
         email : $("#email").val(),
         birthDate : $("#birthDate").val()
@@ -20,11 +20,11 @@ function createUser() {
 
     let validUser = true;
 
-    if (!nameRegex.test(user.firstName)) {
+    if (!nameRegex.test(user.firstname)) {
         validUser = false;
         $("#firstnameError").html("Invalid input for firstname");
     }
-    if (!nameRegex.test(user.surName)) {
+    if (!nameRegex.test(user.surname)) {
         validUser = false;
         $("#surnameError").html("Invalid input for surname");
     }
