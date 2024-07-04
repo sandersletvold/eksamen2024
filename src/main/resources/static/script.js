@@ -1,5 +1,5 @@
 // Task 1 and 2
-function createUser() {
+function signUp() {
     $("#createUserMessage").html("");
     $("#firstnameError").html("");
     $("#surnameError").html("");

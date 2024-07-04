@@ -1,11 +1,14 @@
 package oslomet.data1700.eksamen2024;
 
+import jakarta.servlet.http.HttpServletResponse;
 import jakarta.servlet.http.HttpSession;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RestController;
+
+import java.io.IOException;
 
 @RestController
 public class Controller {
@@ -14,6 +17,8 @@ public class Controller {
 
     @Autowired
     private HttpSession session;
+    @Autowired
+    private HttpServletResponse httpServletResponse;
 
     // CREATE USER
     @PostMapping("/saveUser")
@@ -39,6 +44,7 @@ public class Controller {
         }
     }
 
+    // LOG OUT
     @GetMapping("/logOut")
     public String logOut() {
         session.removeAttribute("loggedIn");
@@ -51,6 +57,14 @@ public class Controller {
         if (session.getAttribute("loggedIn") != null) {
             String sql = "INSERT INTO Books (ISBN, title, author, releaseYear, rating) VALUES (?,?,?,?,?)";
             db.update(sql, book.getISBN(), book.getTitle(), book.getAuthor(), book.getReleaseYear(), book.getRating());
+        }
+    }
+
+    // REDIRECTION
+    @GetMapping("/books.html")
+    public void redirect(HttpServletResponse response) throws IOException {
+        if (session.getAttribute("loggedIn") == null) {
+            response.sendRedirect("index.html");
         }
     }
 }
